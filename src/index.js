@@ -16,11 +16,11 @@ server = app.listen( ()=>{
 });
 
 //exit on mongodb error
-mongoose.connection.on('error',(err)=>{
-    // logger.error(`mongodb connection error : ${MONGO_URL}`);
-    // logger.error(`mongodb connection error : ${error}`);
-    process.exit(1);
-});
+// mongoose.connection.on('error',(err)=>{
+//     // logger.error(`mongodb connection error : ${MONGO_URL}`);
+//     // logger.error(`mongodb connection error : ${error}`);
+//     process.exit(1);
+// });
 //mongodb debug mode
 if(process.env.NODE_ENV!=="production"){
     mongoose.set('debug',true);
