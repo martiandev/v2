@@ -11,13 +11,14 @@ let server;
 server = app.listen( ()=>{
     // logger.info(`Server is listening at ${PORT}`);
     console.log(`process id`,process.pid);
+    console.log(MONGO_URL);
     // throw new Error("error");
 });
 
 //exit on mongodb error
 mongoose.connection.on('error',(err)=>{
-    logger.error(`mongodb connection error : ${MONGO_URL}`);
-    logger.error(`mongodb connection error : ${error}`);
+    // logger.error(`mongodb connection error : ${MONGO_URL}`);
+    // logger.error(`mongodb connection error : ${error}`);
     process.exit(1);
 });
 //mongodb debug mode
