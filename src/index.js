@@ -8,7 +8,7 @@ const {PORT} = process.env ;
 console.log(process.env.NODE_ENV)
 let server;
 
-server = app.listen( ()=>{
+server = app.listen(PORT,()=>{
     // logger.info(`Server is listening at ${PORT}`);
     console.log(`process id`,process.pid);
     console.log(MONGO_URL);
